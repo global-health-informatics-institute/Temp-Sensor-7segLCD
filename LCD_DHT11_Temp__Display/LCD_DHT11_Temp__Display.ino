@@ -3,21 +3,21 @@
 #define dht_apin 13 // sensor Pin is connected to
  
 dht DHT;
-const int segment1_1 = 2;
-const int segment1_2= 4;
-const int segment1_3 =5;
-const int segment1_4 =12;
-const int segment1_5 =14;
-const int segment1_6 =16;
-const int segment1_7 =17;
-const int segment2_1 =18;
-const int segment2_2 =19;
-const int segment2_3 =33;
-const int segment2_4 =32;
-const int segment2_5 =23;
-const int segment2_6 =25;
-const int segment2_7 =26;
-const int ground  = 27;
+const int segment1_1 = 5;
+const int segment1_2= 18; 
+const int segment1_3 =19;
+const int segment1_4 =2;
+const int segment1_5 =4;
+const int segment1_6 =17;
+const int segment1_7 =16;
+const int segment2_1 =32;
+const int segment2_2 =33;
+const int segment2_3 =25;
+const int segment2_4 =26;
+const int segment2_5 =27    ;
+const int segment2_6 =12;
+const int segment2_7 =14;
+const int ground  = 15;
 int seg1;
 int seg2;
  
@@ -127,7 +127,7 @@ void updateLCD(int temperature)
    digitalWrite(segment1_4, HIGH);
    digitalWrite(segment1_5, HIGH);
    digitalWrite(segment1_6, HIGH);
-   digitalWrite(segment1_7, LOW);
+   digitalWrite(segment1_7, HIGH);
    digitalWrite(ground, LOW);
   }
   else if(seg1 == 7){
@@ -229,7 +229,7 @@ void updateLCD(int temperature)
    digitalWrite(segment2_4, HIGH);
    digitalWrite(segment2_5, HIGH);
    digitalWrite(segment2_6, HIGH);
-   digitalWrite(segment2_7, LOW);
+   digitalWrite(segment2_7, HIGH);
    digitalWrite(ground, LOW);
   }
   else if(seg2 == 7){
@@ -285,7 +285,7 @@ void alternate()
 
 void allPinsLOW()
 {
-    digitalWrite(segment1_1, LOW); 
+   digitalWrite(segment1_1, LOW); 
    digitalWrite(segment1_2, LOW);
    digitalWrite(segment1_3, LOW);
    digitalWrite(segment1_4, LOW);
